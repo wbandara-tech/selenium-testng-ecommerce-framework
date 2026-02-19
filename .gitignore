@@ -1,0 +1,44 @@
+# Build output
+target/
+build/
+
+# IDE files
+.idea/
+*.iml
+*.ipr
+*.iws
+.project
+.classpath
+.settings/
+.vscode/
+
+# Log files
+*.log
+logs/
+
+# Test output
+test-output/
+allure-results/
+allure-report/
+
+# Screenshots
+screenshots/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Maven
+.mvn/timing.properties
+.mvn/wrapper/maven-wrapper.jar
+
+# Temporary files
+*.tmp
+*.swp
+*.bak
+*~
+
+# Environment files
+.env
+.env.local
+

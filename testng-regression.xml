@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Regression Test Suite" parallel="tests" thread-count="3" verbose="1">
+
+    <!-- Listeners -->
+    <listeners>
+        <listener class-name="com.wbandara.listeners.TestListener"/>
+        <listener class-name="com.wbandara.listeners.AnnotationTransformer"/>
+        <listener class-name="io.qameta.allure.testng.AllureTestNg"/>
+    </listeners>
+
+    <test name="Regression Tests - Chrome">
+        <parameter name="browser" value="chrome"/>
+        <groups>
+            <run>
+                <include name="regression"/>
+            </run>
+        </groups>
+        <classes>
+            <class name="com.wbandara.tests.LoginTest"/>
+            <class name="com.wbandara.tests.ProductTest"/>
+            <class name="com.wbandara.tests.CheckoutTest"/>
+            <class name="com.wbandara.tests.SessionTest"/>
+        </classes>
+    </test>
+
+    <test name="Regression Tests - Edge">
+        <parameter name="browser" value="edge"/>
+        <groups>
+            <run>
+                <include name="regression"/>
+            </run>
+        </groups>
+        <classes>
+            <class name="com.wbandara.tests.LoginTest"/>
+            <class name="com.wbandara.tests.ProductTest"/>
+            <class name="com.wbandara.tests.CheckoutTest"/>
+            <class name="com.wbandara.tests.SessionTest"/>
+        </classes>
+    </test>
+
+</suite>
+
